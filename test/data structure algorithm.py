@@ -67,31 +67,47 @@
 #     print("Element is not present in array")
 
 
-def binary_search_nayem(arrey,low,high,searching_number):
+# def binary_search_nayem(arrey,low,high,searching_number):
 
-    if low <= high:
+#     if low <= high:
 
-        mid = (low + high) //2
+#         mid = (low + high) //2
 
-        # print(mid)
+#         # print(mid)
 
-        if arrey[mid] == searching_number:
-            print('Here is your desire number you looking for....',arrey[mid])
+#         if arrey[mid] == searching_number:
+#             print('Here is your desire number you looking for....',arrey[mid])
 
-        elif arrey[mid] > searching_number:
+#         elif arrey[mid] > searching_number:
         
-            binary_search_nayem(arrey,0,mid-1,searching_number)
-        else:
+#             binary_search_nayem(arrey,0,mid-1,searching_number)
+#         else:
  
-            binary_search_nayem(arrey,mid+1,high,searching_number)
-    else:
-        print('Ops! the number not found')
+#             binary_search_nayem(arrey,mid+1,high,searching_number)
+#     else:
+#         print('Ops! the number not found')
         
     
 
-arrey = [5,9,17,18,26,44,59,62,74,670,765]
+# arrey = [5,9,17,18,26,44,59,62,74,670,765]
 
-searching_number = int(input())
+# searching_number = int(input())
 
-binary_search_nayem(arrey,0,len(arrey)-1,searching_number)
+# binary_search_nayem(arrey,0,len(arrey)-1,searching_number)
+
+def binary_search(arr,less,greater,find):
+    mid = (less + greater)//2
+    if arr[mid] == find:
+        print(arr[mid])
+    elif arr[mid] > find:
+        binary_search(arr,0, mid-1,find)
+    else:
+        binary_search(arr,mid+1,greater,find)
+arr = [1,5,6,8,9,12,34,67,80,409]
+find = int(input())
+
+binary_search(arr,0,len(arr)-1,find)
+
+
+
 
