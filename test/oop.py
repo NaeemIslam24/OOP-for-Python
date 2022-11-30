@@ -227,7 +227,6 @@
 
 
 
-
 # # ---------------constructor in inheritance A and B init call  multiple inheritance---------------
 
 # class A:
@@ -249,6 +248,7 @@
         
 
 # h = C()
+
 
 
 
