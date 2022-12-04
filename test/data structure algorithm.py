@@ -20,7 +20,20 @@
 #     i = i+1
 
 
-# #-----------------------------------binary search algorithm implement-----------------------------v
+# #------------------------------Linear search algorithm implement-----------------------------
+
+# arr = [1,3,5,6,7,8,13,324,3434,6787]
+
+# finding = int(input())
+
+# for i in arr:
+#     if finding == i:
+#         print('Number is fund here...',)
+# else:
+#     print('Opps! number not')
+
+
+# #-----------------------------------binary search algorithm implement-----------------------------
 
 
 
@@ -95,19 +108,53 @@
 
 # binary_search_nayem(arrey,0,len(arrey)-1,searching_number)
 
-def binary_search(arr,less,greater,find):
-    mid = (less + greater)//2
-    if arr[mid] == find:
-        print(arr[mid])
-    elif arr[mid] > find:
-        binary_search(arr,0, mid-1,find)
-    else:
-        binary_search(arr,mid+1,greater,find)
-arr = [1,5,6,8,9,12,34,67,80,409]
-find = int(input())
+# def binary_search(arr,less,greater,find):
+#     if less <= greater:
+#         mid = (less + greater)//2
+#         if arr[mid] == find:
+#             print(arr[mid])
+#         elif arr[mid] > find:
+#             binary_search(arr,0, mid-1,find)
+#         else:
+#             binary_search(arr,mid+1,greater,find)
+#     else:
+#         print('number not found')
+# arr = [1,5,6,8,9,12,34,67,80,409]
+# find = int(input())
 
-binary_search(arr,0,len(arr)-1,find)
+# binary_search(arr,0,len(arr)-1,find)
 
 
+
+# Selection sort in Python
+# time complexity O(n*n)
+#sorting by finding min_index
+# def selectionSort(array, size):
+                                                                                                                                                                                                                          
+#     for ind in range(size):
+#         min_index = ind
+ 
+#         for j in range(ind + 1, size):
+#             # select the minimum element in every iteration
+#             if array[j] < array[min_index]:
+#                 min_index = j
+#          # swapping the elements to sort the array
+#         (array[ind], array[min_index]) = (array[min_index], array[ind])
+#         print(array[ind])
+ 
+# arr = [-2, 45, 0, 11, -9,88,-97,-202,747]
+# size = len(arr)
+# selectionSort(arr, size)
+# print('The array after sorting in Ascending Order by selection sort is:')
+# print(arr)
+
+
+
+a = [1,2,3,4,5,6,7]
+a = len(a)
+for i in range(a):
+    print('hello')
+    for j in range(i+1,a):
+        print(j)
 
 
