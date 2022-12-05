@@ -126,9 +126,9 @@
 
 
 
-# Selection sort in Python
-# time complexity O(n*n)
-#sorting by finding min_index
+# # Selection sort in Python
+# # time complexity O(n*n)
+# # sorting by finding min_index
 # def selectionSort(array, size):
                                                                                                                                                                                                                           
 #     for ind in range(size):
@@ -140,6 +140,7 @@
 #                 min_index = j
 #          # swapping the elements to sort the array
 #         (array[ind], array[min_index]) = (array[min_index], array[ind])
+
 #         print(array[ind])
  
 # arr = [-2, 45, 0, 11, -9,88,-97,-202,747]
@@ -150,11 +151,18 @@
 
 
 
-a = [1,2,3,4,5,6,7]
-a = len(a)
-for i in range(a):
-    print('hello')
-    for j in range(i+1,a):
-        print(j)
+arr = [4,-5,76,3,-78,53]
+lenth = len(arr)
+for i in range(lenth):
+    j = i+1
+    if arr[i] < arr[j]:
+        
+
+
+
+
+                                                                                                    
+    
+
 
 
