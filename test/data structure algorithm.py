@@ -151,12 +151,35 @@
 
 
 
-arr = [4,-5,76,3,-78,53]
+# arr = [4,-5,76,3,-78,53]
+# lenth = len(arr)
+# for i in range(lenth):
+#     j = i
+#     for k in range(i+1,lenth): 
+#         if arr[k] < arr[i]:
+#             print(arr[k])
+#             i = k
+#     (arr[i], arr[j])=(arr[j],arr[i])
+
+# print(arr)  
+
+def binary_search():
+    lenth = len(arr)
+    less = arr[0]
+    greater = arr[-1]
+    print(greater)
+    middle = lenth // 2
+
+    if arr[middle] == finding:
+        print(middle)
+
+    elif arr[middle]>finding:
+
+    
+arr = [1,5,6,9,12,45,67,89]
 lenth = len(arr)
-for i in range(lenth):
-    j = i+1
-    if arr[i] < arr[j]:
-        
+finding = 5 
+binary_search(arr, finding)
 
 
 
