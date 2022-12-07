@@ -126,7 +126,7 @@
 
 
 
-# # Selection sort in Python
+# #--------------------------------Selection sort in Python-----------------------------
 # # time complexity O(n*n)
 # # sorting by finding min_index
 # def selectionSort(array, size):
@@ -151,38 +151,62 @@
 
 
 
-# arr = [4,-5,76,3,-78,53]
+# arr = [4,-5,76,3,-78,53,-674]
 # lenth = len(arr)
 # for i in range(lenth):
 #     j = i
 #     for k in range(i+1,lenth): 
 #         if arr[k] < arr[i]:
-#             print(arr[k])
+          
 #             i = k
 #     (arr[i], arr[j])=(arr[j],arr[i])
 
 # print(arr)  
 
 
-def binary_search(arr,less,greater,finding): 
+# ##----------------------bubble sorting--------------------------------
 
-    middle = (less+greater)// 2
-    if less <= greater:
-        if arr[middle] == finding:
-            print(arr[middle])
+# # Terget is to sort with minimun to maximum from the end to first.
+# # it compare with index 0 with index 1. if 0 is greater than 1, 0 will be replaced 1. 
+# # then 0 will be compare with index 2. If 2 is big. it will be sat same place and it will compare with 3
+ 
+# def bubbleSort(arr):
+#     n = len(arr)
+#     # optimize code, so if the array is already sorted, it doesn't need
+#     # to go through the entire process
+#     swapped = False
+#     # Traverse through all array elements
+#     for i in range(n-1):
+#         # range(n) also work but outer loop will
+#         # repeat one time more than needed.
+#         # Last i elements are already in place
+#         for j in range(0, n-i-1):
+ 
+#             # traverse the array from 0 to n-i-1
+#             # Swap if the element found is greater
+#             # than the next element
+#             if arr[j] > arr[j + 1]:
+#                 swapped = True
+#                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
+         
+#         if not swapped:
+#             # if we haven't needed to make a single swap, we
+#             # can just exit the main loop.
+#             return
+ 
+ 
+# # Driver code to test above
+# arr = [64, 34, 25, 12, 22, 11, 90]
+ 
+# bubbleSort(arr)
+ 
+# print("Sorted array is:")
+# for i in range(len(arr)):
+#     print("% d" % arr[i], end=" ")
 
-        elif finding > arr[middle]:
-            binary_search(arr,middle+1,greater,finding)
-        else:
-            binary_search(arr,less,middle-1,finding)
-    else:
-        print('number not found')
-          
-arr = [1,5,6,9,12,45,67,89]
-finding = 60
-less = 0
-greater = len(arr)-1
-binary_search(arr,less,greater,finding)
+            
+
+
 
 
 
