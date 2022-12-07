@@ -163,23 +163,26 @@
 
 # print(arr)  
 
-def binary_search():
-    lenth = len(arr)
-    less = arr[0]
-    greater = arr[-1]
-    print(greater)
-    middle = lenth // 2
 
-    if arr[middle] == finding:
-        print(middle)
+def binary_search(arr,less,greater,finding): 
 
-    elif arr[middle]>finding:
+    middle = (less+greater)// 2
+    if less <= greater:
+        if arr[middle] == finding:
+            print(arr[middle])
 
-    
+        elif finding > arr[middle]:
+            binary_search(arr,middle+1,greater,finding)
+        else:
+            binary_search(arr,less,middle-1,finding)
+    else:
+        print('number not found')
+          
 arr = [1,5,6,9,12,45,67,89]
-lenth = len(arr)
-finding = 5 
-binary_search(arr, finding)
+finding = 60
+less = 0
+greater = len(arr)-1
+binary_search(arr,less,greater,finding)
 
 
 
